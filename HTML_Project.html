@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kendi Portfolio</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: #0f172a;
+            color: #e5eefb;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        header {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: #dbeafe;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            background: #2563eb;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        section {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .hero {
+            display: grid;
+            gap: 18px;
+            align-items: center;
+            grid-template-columns: 1.2fr 0.8fr;
+        }
+
+        .hero-card {
+            background: linear-gradient(145deg, #1f2937, #111827);
+            border: 1px solid #374151;
+            border-radius: 18px;
+            padding: 18px;
+        }
+
+        .pill {
+            display: inline-block;
+            background: #1d4ed8;
+            color: #eff6ff;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: #172033;
+            border: 1px solid #263244;
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .card ul { padding-left: 18px; }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #dbeafe;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            background: #0b1220;
+            color: #eff6ff;
+        }
+
+        button {
+            width: fit-content;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 20px 28px;
+            color: #cbd5e1;
+            background: #020617;
+        }
+
+        @media (max-width: 820px) {
+            .hero, .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="brand" href="#home">Portfolio</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <article class="hero-card">
+                <span class="pill">Welcome</span>
+                <h1>Build a simple, modern landing page.</h1>
+                <p>This page includes a navigation bar, several content sections, a contact form, and a footer to help you start your portfolio or personal website.</p>
+            </article>
+            <article class="hero-card">
+                <h2>Quick Overview</h2>
+                <ul>
+                    <li>Clean navigation with anchor links</li>
+                    <li>Dedicated about, work, resume, and contact areas</li>
+                    <li>Responsive layout for smaller screens</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>I am a web developer who enjoys building clear, user-friendly websites with a strong focus on layout, readability, and accessibility.</p>
+            <div class="grid-2">
+                <article class="card">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>Responsive Design</li>
+                        <li>Basic Web Forms</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Goals</h3>
+                    <ul>
+                        <li>Create polished interfaces</li>
+                        <li>Improve user experience</li>
+                        <li>Keep code simple and maintainable</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Work</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3>Project One</h3>
+                    <p>Designed a lightweight landing page with a clear intro, sections, and CTA elements.</p>
+                </article>
+                <article class="card">
+                    <h3>Project Two</h3>
+                    <p>Built a responsive portfolio layout with accessible navigation and organized content blocks.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <article class="card">
+                <h3>Experience</h3>
+                <p>Front-end web development, responsive page design, HTML/CSS implementation, and form-based user interactions.</p>
+            </article>
+            <article class="card">
+                <h3>Education</h3>
+                <p>Focused on web technologies, design fundamentals, and practical project development.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Use the form below to get in touch.</p>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
